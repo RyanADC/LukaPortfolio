@@ -1,19 +1,21 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { projects } from '$lib/data/projects';
+	import { onMount } from 'svelte';
 
 	const visualWorksProjects = projects.filter(p => p.category === 'visual-works');
 
-	// Get project ID from URL query parameter, or default to first project
-	function getInitialProjectId(): string {
+	// Default to first project, then check URL params on client
+	let selectedProjectId = $state(visualWorksProjects[0]?.id || '');
+
+	onMount(() => {
+		// Check URL params only on the client side
 		const urlProjectId = $page.url.searchParams.get('project');
 		if (urlProjectId && visualWorksProjects.some(p => p.id === urlProjectId)) {
-			return urlProjectId;
+			selectedProjectId = urlProjectId;
 		}
-		return visualWorksProjects[0]?.id || '';
-	}
-
-	let selectedProjectId = $state(getInitialProjectId());
+	});
 
 	function selectProject(id: string) {
 		selectedProjectId = id;
