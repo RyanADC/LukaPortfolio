@@ -14,11 +14,11 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		id: 'project-1',
-		title: 'Project One',
-		subtitle: 'Subtitle here',
-		description: 'A detailed description of the first project. Explain the concept, process, and outcome.',
+		title: 'Illustration',
+		subtitle: 'A collection of custom playing cards',
+		description: 'This project is a custom collection of playing cards, each digitally illustrated by hand to create a fully tailored deck. Every card was designed with consistency, detail, and character in mind, blending traditional playing card structure with a unique visual style. The result is a cohesive, original deck that showcases both illustration skill and thoughtful design.',
 		category: 'visual-works',
-		thumbnail: '/images/projects/digital-illustration.webp',
+		thumbnail: '/images/projects/illustration-cards.webp',
 		images: [
 			'/images/projects/digital-illustration.webp'
 		],
@@ -28,30 +28,30 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'project-2',
-		title: 'Project Two',
-		subtitle: 'Subtitle here',
-		description: 'A detailed description of the second project. Explain the concept, process, and outcome.',
+		title: 'PAN Amsterdam',
+		subtitle: 'Product and Promotional Photography',
+		description: 'This project captures a promotional photography shoot for Heutink Ikonen during the PAN Amsterdam Art Expo. The focus was on highlighting the gallery\'s presence, artworks, and atmosphere within the dynamic setting of the fair. Through careful composition and lighting, the images were created to reflect both the refinement of the artworks and the energy of the exhibition environment.',
 		category: 'visual-works',
 		thumbnail: '/images/projects/traditional-painting.webp',
 		images: [
 			'/images/projects/traditional-painting.webp'
 		],
 		year: 2024,
-		tags: ['Painting', 'Traditional Art'],
+		tags: ['Photography', 'Exposition'],
 		link: '/visual-works/project-2'
 	},
 	{
 		id: 'identifai',
 		title: 'IdentifAI',
-		subtitle: 'AI-Powered Recognition',
-		description: 'A detailed description of the IdentifAI project. Explain the technology, purpose, and impact.',
-		category: 'identifai',
+		subtitle: 'Mobile app designed to help people take control in the age of AI',
+		description: 'Together with my project team, I developed a tool designed to help users identify AI-generated content by providing them with the insights they need to make informed judgments. Rather than simply presenting information, the project emphasizes user agency, placing decision-making power directly in the hands of the user. Our goal is to empower users and equip them to confidently navigate the evolving information landscape.',
+		category: 'visual-works',
 		thumbnail: '/images/projects/identifai-card.webp',
 		images: [
 			'/images/projects/identifai-card.webp'
 		],
 		year: 2024,
-		tags: ['AI', 'Machine Learning', 'Technology'],
+		tags: ['UI/UX', 'AI'],
 		link: '/identifai'
 	},
 	{
@@ -67,51 +67,6 @@ export const projects: Project[] = [
 		year: 2024,
 		tags: ['Sculpture', '3D Art'],
 		link: '/visual-works/project-3'
-	},
-	{
-		id: 'project-4',
-		title: 'Project Four',
-		subtitle: 'Subtitle here',
-		description: 'A detailed description of the fourth project. Explain the concept, process, and outcome.',
-		category: 'visual-works',
-		thumbnail: 'https://picsum.photos/seed/abstract/400/300',
-		images: [
-			'https://picsum.photos/seed/abstract/800/600',
-			'https://picsum.photos/seed/abstract2/800/600'
-		],
-		year: 2023,
-		tags: ['Abstract', 'Mixed Media'],
-		link: '/visual-works/project-4'
-	},
-	{
-		id: 'project-5',
-		title: 'Project Five',
-		subtitle: 'Subtitle here',
-		description: 'A detailed description of the fifth project. Explain the concept, process, and outcome.',
-		category: 'visual-works',
-		thumbnail: 'https://picsum.photos/seed/portrait/400/300',
-		images: [
-			'https://picsum.photos/seed/portrait/800/600',
-			'https://picsum.photos/seed/portrait2/800/600'
-		],
-		year: 2023,
-		tags: ['Portrait', 'Photography'],
-		link: '/visual-works/project-5'
-	},
-	{
-		id: 'project-6',
-		title: 'Project Six',
-		subtitle: 'Subtitle here',
-		description: 'A detailed description of the sixth project. Explain the concept, process, and outcome.',
-		category: 'visual-works',
-		thumbnail: 'https://picsum.photos/seed/landscape/400/300',
-		images: [
-			'https://picsum.photos/seed/landscape/800/600',
-			'https://picsum.photos/seed/landscape2/800/600'
-		],
-		year: 2023,
-		tags: ['Landscape', 'Digital Art'],
-		link: '/visual-works/project-6'
 	}
 ];
 

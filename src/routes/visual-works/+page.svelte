@@ -1,9 +1,19 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { projects } from '$lib/data/projects';
 
 	const visualWorksProjects = projects.filter(p => p.category === 'visual-works');
 
-	let selectedProjectId = $state(visualWorksProjects[0]?.id || '');
+	// Get project ID from URL query parameter, or default to first project
+	function getInitialProjectId(): string {
+		const urlProjectId = $page.url.searchParams.get('project');
+		if (urlProjectId && visualWorksProjects.some(p => p.id === urlProjectId)) {
+			return urlProjectId;
+		}
+		return visualWorksProjects[0]?.id || '';
+	}
+
+	let selectedProjectId = $state(getInitialProjectId());
 
 	function selectProject(id: string) {
 		selectedProjectId = id;
@@ -60,6 +70,11 @@
 									<span class="tag">{tag}</span>
 								{/each}
 							</div>
+							<img
+								src={project.images[0]}
+								alt={project.title}
+								class="project-image-mobile"
+							/>
 						</div>
 					</div>
 				</button>
@@ -76,6 +91,7 @@
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 		color: white;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	/* Left Section */
@@ -263,7 +279,18 @@
 		color: #c084fc;
 	}
 
-	/* Responsive */
+	.project-image-mobile {
+		display: none;
+		width: 100%;
+		height: auto;
+		max-height: 50vh;
+		object-fit: cover;
+		border-radius: 1rem;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		margin-top: 1.5rem;
+	}
+
+	/* Responsive - Tablet */
 	@media (max-width: 900px) {
 		.projects-page {
 			grid-template-columns: 1fr;
@@ -282,11 +309,70 @@
 		.project-bar-header {
 			grid-template-columns: 40px 1fr;
 			gap: 1rem;
+			padding: 1.5rem 2rem;
 		}
 
 		.project-year,
 		.project-tags {
 			display: none;
+		}
+
+		.project-details {
+			padding-left: calc(40px + 3rem);
+			padding-right: 2rem;
+		}
+
+		.project-image-mobile {
+			display: block;
+		}
+	}
+
+	/* Responsive - Mobile */
+	@media (max-width: 600px) {
+		.title-area {
+			padding: 1.25rem 1rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.subtitle {
+			font-size: 0.85rem;
+			margin-top: 1rem;
+		}
+
+		.project-bar-header {
+			grid-template-columns: 30px 1fr;
+			gap: 0.75rem;
+			padding: 1rem 1rem;
+		}
+
+		.project-number {
+			font-size: 0.85rem;
+		}
+
+		.project-title {
+			font-size: 1rem;
+		}
+
+		.project-details {
+			padding-left: calc(30px + 1.75rem);
+			padding-right: 1rem;
+		}
+
+		.project-subtitle {
+			font-size: 0.95rem;
+		}
+
+		.project-description {
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+		}
+
+		.tag {
+			padding: 0.3rem 0.75rem;
+			font-size: 0.75rem;
 		}
 	}
 </style>

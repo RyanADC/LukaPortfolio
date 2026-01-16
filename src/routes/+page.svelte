@@ -24,23 +24,30 @@
 			<span class="connect-link">linkedin.com/luka-liefers</span>
 		</a>
 
+		<!-- Mobile Divider - Projects -->
+		<div class="mobile-divider">
+			<span class="divider-line"></span>
+			<span class="divider-text font-akony">HIGHLIGHTS</span>
+			<span class="divider-line"></span>
+		</div>
+
 		<!-- Portfolio Thumbnails -->
-		<a href="/visual-works" class="card thumb-card thumb-1">
+		<a href="/visual-works?project={thumbnailProjects[0].id}" class="card thumb-card thumb-1">
 			<span class="thumb-title font-akony">{thumbnailProjects[0].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[0].thumbnail} alt={thumbnailProjects[0].title} class="thumb-image" />
 		</a>
 
-		<a href="/visual-works" class="card thumb-card thumb-2">
+		<a href="/visual-works?project={thumbnailProjects[1].id}" class="card thumb-card thumb-2">
 			<span class="thumb-title font-akony">{thumbnailProjects[1].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[1].thumbnail} alt={thumbnailProjects[1].title} class="thumb-image" />
 		</a>
 
-		<a href="/visual-works" class="card thumb-card identifai-card">
+		<a href="/visual-works?project={thumbnailProjects[2].id}" class="card thumb-card identifai-card">
 			<span class="thumb-title font-akony">{thumbnailProjects[2].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[2].thumbnail} alt={thumbnailProjects[2].title} class="thumb-image" />
 		</a>
 
-		<a href="/visual-works" class="card thumb-card thumb-3">
+		<a href="/visual-works?project={thumbnailProjects[3].id}" class="card thumb-card thumb-3">
 			<span class="thumb-title font-akony">{thumbnailProjects[3].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[3].thumbnail} alt={thumbnailProjects[3].title} class="thumb-image" />
 		</a>
@@ -49,6 +56,13 @@
 		<a href="/visual-works" class="card create-card">
 			<img src="/images/homepage/create-background.webp" alt="Create" class="create-bg" />
 		</a>
+
+		<!-- Mobile Divider - Resume -->
+		<div class="mobile-divider">
+			<span class="divider-line"></span>
+			<span class="divider-text font-akony">ABOUT ME</span>
+			<span class="divider-line"></span>
+		</div>
 
 		<!-- Resume Card -->
 		<a href="/resume" class="card resume-card">
@@ -298,13 +312,21 @@
 
 	.thumb-title {
 		position: absolute;
-		top: 1.5rem;
-		left: 1.5rem;
+		top: 2.5rem;
+		left: 2.5rem;
 		font-size: 1.2rem;
 		font-weight: 400;
 		color: #2a2a2a;
 		text-align: left;
 		z-index: 0;
+	}
+
+	/* Large screens - move title further down/right */
+	@media (min-width: 1440px) {
+		.thumb-title {
+			top: 3rem;
+			left: 3rem;
+		}
 	}
 
 	.thumb-1 {
@@ -407,8 +429,20 @@
 		cursor: default;
 	}
 
-	/* Responsive */
-	@media (max-width: 900px) {
+	/* Mobile Dividers - Hidden by default */
+	.mobile-divider {
+		display: none;
+	}
+
+	/* Responsive - Tablet */
+	@media (max-width: 1024px) {
+		.homepage {
+			height: auto;
+			min-height: 100vh;
+			overflow: auto;
+			padding: 1rem;
+		}
+
 		.bento-grid {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto;
@@ -418,23 +452,173 @@
 		.hero-card {
 			grid-column: 1 / -1;
 			grid-row: auto;
-			min-height: 400px;
+			min-height: 350px;
 		}
 
-		.connect-card,
+		.connect-card {
+			grid-column: 1 / -1;
+			grid-row: auto;
+			min-height: 80px;
+		}
+
 		.thumb-1,
 		.thumb-2,
 		.thumb-3,
-		.identifai-card,
-		.create-card,
-		.resume-card {
+		.identifai-card {
 			grid-column: span 1;
 			grid-row: auto;
-			min-height: 100px;
+			min-height: 180px;
+		}
+
+		.create-card {
+			grid-column: 1 / -1;
+			grid-row: auto;
+			min-height: 250px;
+		}
+
+		.resume-card {
+			grid-column: 1 / -1;
+			grid-row: auto;
+			min-height: 150px;
+		}
+
+		.thumb-title {
+			font-size: 1rem;
+			top: 2rem;
+			left: 2rem;
+		}
+
+		.hero-overlay h1 {
+			font-size: 2rem;
+		}
+
+		.hero-text p {
+			font-size: 1.1rem;
+		}
+
+		.hero-text .highlight {
+			font-size: 1.5rem;
+			margin-left: 1rem;
+		}
+
+		.connect-text,
+		.connect-link {
+			font-size: 1.2rem;
+		}
+
+		.create-card::before {
+			font-size: 2rem;
+		}
+	}
+
+	/* Responsive - Mobile */
+	@media (max-width: 600px) {
+		.homepage {
+			padding: 0.75rem;
+		}
+
+		.bento-grid {
+			grid-template-columns: 1fr;
+			gap: 0.75rem;
+		}
+
+		.card {
+			border-radius: 1rem;
+			border-width: 2px;
+		}
+
+		.hero-card {
+			min-height: 300px;
+		}
+
+		.connect-card {
+			min-height: 70px;
+		}
+
+		.thumb-1,
+		.thumb-2,
+		.thumb-3,
+		.identifai-card {
+			min-height: 150px;
+		}
+
+		.thumb-title {
+			font-size: 0.9rem;
+			top: 1.5rem;
+			left: 1.5rem;
+		}
+
+		.thumb-image {
+			border-width: 2px;
+		}
+
+		.thumb-card:hover .thumb-image {
+			transform: none;
 		}
 
 		.create-card {
 			min-height: 200px;
+		}
+
+		.create-card::before {
+			font-size: 1.5rem;
+			right: 0.75rem;
+		}
+
+		.resume-card {
+			min-height: 120px;
+		}
+
+		.resume-card .resume-text {
+			font-size: clamp(2rem, 12vw, 4rem);
+		}
+
+		.hero-overlay {
+			padding: 1rem;
+		}
+
+		.hero-overlay h1 {
+			font-size: 1.75rem;
+		}
+
+		.hero-text p {
+			font-size: 1rem;
+		}
+
+		.hero-text .highlight {
+			font-size: 1.25rem;
+			margin-left: 0.5rem;
+		}
+
+		.connect-text,
+		.connect-link {
+			font-size: 1rem;
+		}
+
+		.card:hover {
+			transform: none;
+		}
+
+		/* Show mobile dividers */
+		.mobile-divider {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			padding: 0.5rem 0;
+			grid-column: 1 / -1;
+		}
+
+		.divider-line {
+			flex: 1;
+			height: 1px;
+			background: rgba(255, 255, 255, 0.3);
+		}
+
+		.divider-text {
+			font-size: 0.8rem;
+			color: rgba(255, 255, 255, 0.6);
+			letter-spacing: 0.15em;
+			white-space: nowrap;
 		}
 	}
 </style>
