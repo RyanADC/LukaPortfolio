@@ -19,9 +19,9 @@
 		</a>
 
 		<!-- Connect Button -->
-		<a href="https://www.linkedin.com/in/luka-liefers-112451247/" target="_blank" rel="noopener noreferrer" class="card connect-card">
+		<a href="mailto:luka.liefers@student.nhlstenden.com" class="card connect-card">
 			<span class="connect-text font-akony">CONNECT</span>
-			<span class="connect-link">linkedin.com/luka-liefers</span>
+			<span class="connect-link font-akony">send me an email</span>
 		</a>
 
 		<!-- Mobile Divider - Projects -->
@@ -53,9 +53,9 @@
 		</a>
 
 		<!-- Create Card -->
-		<a href="/visual-works" class="card create-card">
+		<div class="card create-card">
 			<img src="/images/homepage/create-background.webp" alt="Create" class="create-bg" />
-		</a>
+		</div>
 
 		<!-- Mobile Divider - Resume -->
 		<div class="mobile-divider">
