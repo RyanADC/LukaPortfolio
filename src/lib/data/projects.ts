@@ -18,9 +18,9 @@ export const projects: Project[] = [
 		subtitle: 'Subtitle here',
 		description: 'A detailed description of the first project. Explain the concept, process, and outcome.',
 		category: 'visual-works',
-		thumbnail: '/images/projects/Zero_Two_Melvin.png',
+		thumbnail: '/images/projects/digital-illustration.webp',
 		images: [
-			'/images/projects/Zero_Two_Melvin.png'
+			'/images/projects/digital-illustration.webp'
 		],
 		year: 2024,
 		tags: ['Illustration', 'Digital Art'],
@@ -32,9 +32,9 @@ export const projects: Project[] = [
 		subtitle: 'Subtitle here',
 		description: 'A detailed description of the second project. Explain the concept, process, and outcome.',
 		category: 'visual-works',
-		thumbnail: '/images/projects/IMG_1433.jpg',
+		thumbnail: '/images/projects/traditional-painting.webp',
 		images: [
-			'/images/projects/IMG_1433.jpg'
+			'/images/projects/traditional-painting.webp'
 		],
 		year: 2024,
 		tags: ['Painting', 'Traditional Art'],
@@ -46,9 +46,9 @@ export const projects: Project[] = [
 		subtitle: 'AI-Powered Recognition',
 		description: 'A detailed description of the IdentifAI project. Explain the technology, purpose, and impact.',
 		category: 'identifai',
-		thumbnail: '/images/projects/identifyai_card.png',
+		thumbnail: '/images/projects/identifai-card.webp',
 		images: [
-			'/images/projects/identifyai_card.png'
+			'/images/projects/identifai-card.webp'
 		],
 		year: 2024,
 		tags: ['AI', 'Machine Learning', 'Technology'],
@@ -60,9 +60,9 @@ export const projects: Project[] = [
 		subtitle: 'Subtitle here',
 		description: 'A detailed description of the third project. Explain the concept, process, and outcome.',
 		category: 'visual-works',
-		thumbnail: '/images/projects/Idea_2_trial_3.png',
+		thumbnail: '/images/projects/3d-sculpture.webp',
 		images: [
-			'/images/projects/Idea_2_trial_3.png'
+			'/images/projects/3d-sculpture.webp'
 		],
 		year: 2024,
 		tags: ['Sculpture', '3D Art'],

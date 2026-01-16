@@ -8,7 +8,7 @@
 	<div class="bento-grid">
 		<!-- Main Hero Card -->
 		<a href="/visual-works" class="card hero-card">
-			<img src="/images/homepage/mainimage.jpg" alt="Luka Liefers - Peace Seeker" class="hero-bg" />
+			<img src="/images/homepage/hero-portrait.webp" alt="Luka Liefers - Peace Seeker" class="hero-bg" />
 			<div class="hero-overlay">
 				<h1 class="font-akony">LUKA<br />LIEFERS</h1>
 				<div class="hero-text">
@@ -25,29 +25,29 @@
 		</a>
 
 		<!-- Portfolio Thumbnails -->
-		<a href={thumbnailProjects[0].link} class="card thumb-card thumb-1">
+		<a href="/visual-works" class="card thumb-card thumb-1">
 			<span class="thumb-title font-akony">{thumbnailProjects[0].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[0].thumbnail} alt={thumbnailProjects[0].title} class="thumb-image" />
 		</a>
 
-		<a href={thumbnailProjects[1].link} class="card thumb-card thumb-2">
+		<a href="/visual-works" class="card thumb-card thumb-2">
 			<span class="thumb-title font-akony">{thumbnailProjects[1].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[1].thumbnail} alt={thumbnailProjects[1].title} class="thumb-image" />
 		</a>
 
-		<a href={thumbnailProjects[2].link} class="card thumb-card identifai-card">
+		<a href="/visual-works" class="card thumb-card identifai-card">
 			<span class="thumb-title font-akony">{thumbnailProjects[2].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[2].thumbnail} alt={thumbnailProjects[2].title} class="thumb-image" />
 		</a>
 
-		<a href={thumbnailProjects[3].link} class="card thumb-card thumb-3">
+		<a href="/visual-works" class="card thumb-card thumb-3">
 			<span class="thumb-title font-akony">{thumbnailProjects[3].title.toUpperCase()}</span>
 			<img src={thumbnailProjects[3].thumbnail} alt={thumbnailProjects[3].title} class="thumb-image" />
 		</a>
 
 		<!-- Create Card -->
-		<a href="/create" class="card create-card">
-			<img src="https://picsum.photos/seed/create/800/1000" alt="Create" class="create-bg" />
+		<a href="/visual-works" class="card create-card">
+			<img src="/images/homepage/create-background.webp" alt="Create" class="create-bg" />
 		</a>
 
 		<!-- Resume Card -->
@@ -174,13 +174,13 @@
 	}
 
 	.hero-text p {
-		font-size: 1.1rem;
+		font-size: 1.4rem;
 		margin: 0;
 		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 	}
 
 	.hero-text .highlight {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		font-weight: 700;
 		margin-left: 2rem;
 	}
